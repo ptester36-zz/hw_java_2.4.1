@@ -1,8 +1,7 @@
 package ru.netology.stats;
 
 class StatsService {
-    public long sumSales() {
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public long sumSales(long[] sales) {
         long sum = 0;
         for (long purchase : sales) {
             sum += purchase;
@@ -10,8 +9,7 @@ class StatsService {
         return sum;
     }
 
-    public long averageMonthlySales() {
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public long averageMonthlySales(long[] sales) {
         long sum = 0;
         for (long purchase : sales) {
             sum += purchase;
@@ -20,8 +18,7 @@ class StatsService {
         return averageSales;
     }
 
-    public long peakSales() {
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 19, 7, 14, 14, 18};
+    public long peakSales(long[] sales) {
         long peakSale = 0;
         long peakMonth = 0;
         for (int i = 0; i < sales.length; i++) {
@@ -34,8 +31,7 @@ class StatsService {
         return peakMonth;
     }
 
-    public long minSales() {
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 19, 7, 14, 14, 18};
+    public long minSales(long[] sales) {
         long minSale = sales [0];
         long minMonth = 0;
         for (int i = 0; i < sales.length; i++) {
@@ -48,8 +44,7 @@ class StatsService {
         return minMonth;
     }
 
-    public long sumMonthsMinSales() {
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 19, 7, 14, 18, 24};
+    public long sumMonthsMinSales(long[] sales) {
         long sum = 0;
         for (long purchase : sales) {
             sum += purchase;
@@ -65,8 +60,7 @@ class StatsService {
         return month;
     }
 
-    public long sumMonthsPeakSales() {
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 19, 7, 14, 18, 24};
+    public long sumMonthsPeakSales(long[] sales) {
         long sum = 0;
         for (long purchase : sales) {
             sum += purchase;

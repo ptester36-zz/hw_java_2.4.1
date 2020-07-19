@@ -8,8 +8,9 @@ class StatsServiceTest {
     void sumSalesTest() {
         StatsService service = new StatsService();
 
-        long expected = 180;
-        long actual = service.sumSales();
+        long [] purchase = {8, 15, 13, 15, 17, 20, 19, 19, 7, 14, 18, 24};
+        long expected = 189;
+        long actual = service.sumSales(purchase);
 
         assertEquals(expected, actual);
     }
@@ -18,8 +19,9 @@ class StatsServiceTest {
     void averageMonthlySalesTest() {
         StatsService service = new StatsService();
 
+        long [] purchase = {8, 15, 13, 15, 17, 20, 19, 19, 7, 14, 18, 24};
         long expected = 15;
-        long actual = service.averageMonthlySales();
+        long actual = service.averageMonthlySales(purchase);
 
         assertEquals(expected, actual);
     }
@@ -28,8 +30,9 @@ class StatsServiceTest {
     void peakSalesTest() {
         StatsService service = new StatsService();
 
-        long expected = 6;
-        long actual = service.peakSales();
+        long [] purchase = {8, 15, 13, 15, 17, 20, 19, 19, 7, 14, 18, 24};
+        long expected = 12;
+        long actual = service.peakSales(purchase);
 
         assertEquals(expected, actual);
     }
@@ -38,8 +41,9 @@ class StatsServiceTest {
     void minSalesTest() {
         StatsService service = new StatsService();
 
+        long [] purchase = {8, 15, 13, 15, 17, 20, 19, 19, 7, 14, 18, 24};
         long expected = 9;
-        long actual = service.minSales();
+        long actual = service.minSales(purchase);
 
         assertEquals(expected, actual);
     }
@@ -48,8 +52,9 @@ class StatsServiceTest {
     void sumMonthsPeakSalesTest() {
         StatsService service = new StatsService();
 
+        long [] purchase = {8, 15, 13, 15, 17, 20, 19, 19, 7, 14, 18, 24};
         long expected = 6;
-        long actual = service.sumMonthsPeakSales();
+        long actual = service.sumMonthsPeakSales(purchase);
 
         assertEquals(expected, actual);
     }
@@ -58,8 +63,9 @@ class StatsServiceTest {
     void sumMonthsMinSalesTest() {
         StatsService service = new StatsService();
 
+        long [] purchase = {8, 15, 13, 15, 17, 20, 19, 19, 7, 14, 18, 24};
         long expected = 4;
-        long actual = service.sumMonthsMinSales();
+        long actual = service.sumMonthsMinSales(purchase);
 
         assertEquals(expected, actual);
     }
