@@ -23,7 +23,7 @@ class StatsService {
         long peakMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             int month = i;
-            if (sales[i] > peakSale) {
+            if (sales[i] >= peakSale) {
                 peakSale = sales[i];
                 peakMonth = month + 1;
             }
@@ -36,7 +36,7 @@ class StatsService {
         long minMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             int month = i;
-            if (minSale > sales[i]) {
+            if (minSale >= sales[i]) {
                 minSale = sales[i];
                 minMonth = month + 1;
             }
@@ -50,7 +50,6 @@ class StatsService {
             sum += purchase;
         }
         long averageSales = sum / 12;
-        System.out.println(averageSales);
         int month = 0;
         for (long purchase : sales) {
             long sale = purchase;
@@ -66,7 +65,6 @@ class StatsService {
             sum += purchase;
         }
         long averageSales = sum / 12;
-        System.out.println(averageSales);
         int month = 0;
         for (long purchase : sales) {
             long sale = purchase;
