@@ -45,11 +45,7 @@ class StatsService {
     }
 
     public long sumMonthsMinSales(long[] sales) {
-        long sum = 0;
-        for (long purchase : sales) {
-            sum += purchase;
-        }
-        long averageSales = sum / 12;
+        long averageSales = averageMonthlySales(sales);
         int month = 0;
         for (long purchase : sales) {
             long sale = purchase;
@@ -60,11 +56,7 @@ class StatsService {
     }
 
     public long sumMonthsPeakSales(long[] sales) {
-        long sum = 0;
-        for (long purchase : sales) {
-            sum += purchase;
-        }
-        long averageSales = sum / 12;
+        long averageSales = averageMonthlySales(sales);
         int month = 0;
         for (long purchase : sales) {
             long sale = purchase;
